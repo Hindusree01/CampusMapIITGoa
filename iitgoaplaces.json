@@ -1,0 +1,271 @@
+[
+    {
+      "name": "Admin block",
+      "latitude": 15.42259,
+      "longitude":73.9802 ,
+      "floor": 2,
+      "capacity": 100,
+      "type": "Office"
+
+      
+    },
+
+    {
+        "name": "Mahalaxmi Bungalow",
+        "latitude": 15.42217,
+        "longitude": 73.97907,
+        "floor": 2,
+        "capacity": 100,
+        "type": "Office"
+      
+      },
+
+      {
+        "name": "Academic Block-A(CL-1, Faculty Cabin)",
+        
+        "latitude": 15.42258,
+        "longitude": 73.97871,
+        "floor": 2,
+        "capacity": 100,
+        "type": "Classroom"
+      
+      },
+
+      {
+        "name": "Academic Block-B(CL-2, CL-3, Physics Lab, Faculty Cabins, Physis Lab)",
+        "latitude":15.42258,
+        "longitude": 73.97843,
+        "floor": 2,
+        "capacity": 100,
+        "type": "Classroom"
+  
+      },
+
+
+      {
+        "name": "GEC Mining(LH-1,LH-2,LH-3,seminar hall,Tutorial block)",
+        "latitude": 15.42501,
+        "longitude":73.97849 ,
+        "floor": 2,
+        "capacity": 100,
+        "type": "Classroom"
+    
+      },
+
+
+      {
+        "name": "IIT Goa Central Library",
+        "latitude": 15.42182,
+        "longitude": 73.97846,
+        "floor": 2,
+        "capacity": 100,
+        "type": "Library"
+
+      },
+
+
+      {
+        "name": "GEC mechanical workshop",
+        "latitude": 15.42297,
+        "longitude": 73.97861,
+        "type": "Workshop"
+      },
+      {
+        "name": "Hostel Block B-1",
+        "latitude":15.42246,
+        "longitude": 73.98236,
+        "floor": 2,
+        "capacity": 100,
+        "type": "Hostel"
+
+      },
+
+      {
+        "name": "Hostel Block B-2",
+        "latitude": 15.42223, 
+        "longitude": 73.98273,
+        "floor": 2,
+        "capacity": 100,
+        "type": "Hostel"
+
+      },
+
+      {
+        "name": "Hostel Block B-3",
+        "latitude": 15.42247,
+        "longitude": 73.9829,
+        "floor": 2,
+        "capacity": 100,
+        "type": "Hostel"
+
+      },
+
+      {
+        "name": "Hostel Block G-1",
+        "latitude": 15.42291,
+        "longitude": 73.98317,
+        "floor": 2,
+        "capacity": 100,
+        "type": "Hostel"
+
+      },
+
+      {
+        "name": "IIT Goa Central Mess",
+        "latitude": 15.42298,
+        "longitude": 73.98259,
+        "floor": 2,
+        "capacity": 100,
+        "type": "HostelMess"
+
+      },
+
+      {
+        "name": "Infinity Ground",
+        "latitude": 15.42617,
+        "longitude": 73.9802,
+        "floor": 2,
+        "capacity": 100,
+        "type": "Ground"
+
+      },
+
+      {
+        "name": "Happenings Ground",
+        "latitude": 15.42307,
+        "longitude": 73.98008,
+        "floor": 2,
+        "capacity": 100,
+        "type": "Ground"
+      },
+
+      {
+        "name": "GEC Gymkhana",
+        "latitude": 15.4255, 
+        "longitude": 73.9804,
+        "floor": 2,
+        "capacity": 100,
+        "type": "Gym"
+
+
+      },
+
+    {
+        "name": "IIT Goa Gym",
+        "latitude":15.42246,
+        "longitude": 73.98236,
+        "floor": 2,
+        "capacity": 100,
+        "type": "Gym"
+
+    },
+
+
+  {
+    "name": "IIT Goa Medical Centre",
+    "latitude": 15.41948,
+    "longitude": 73.98064,
+    "floor": 2,
+    "capacity": 100,
+    "type": "Hospital"
+
+  },
+
+
+  {
+    "name": "GEC Library Hall",
+    "latitude": 15.42307,
+    "longitude": 73.98008,
+    "floor": 2,
+    "capacity": 100,
+    "type": "Library"
+
+  },
+
+
+  {
+    "name": "Hanuman Temple",
+    "latitude":15.42071,
+    "longitude": 73.98152,
+    "floor": 2,
+    "capacity": 100,
+    "type": "Temple"
+
+  },
+
+
+  {
+    "name": "Hostel security",
+    "latitude": 15.42295,
+    "longitude": 73.98213,
+    "floor": 2,
+    "capacity": 100,
+    "type": "SecurityOffice"
+
+  },
+
+
+  {
+    "name": "GEC Mechanical Workshop",
+    "latitude":15.42299,
+    "longitude": 73.97858,
+    "floor": 2,
+    "capacity": 100,
+    "type": "Workshop"
+  },
+
+
+  
+  {
+    "name": "GEC Canteen",
+    "latitude":15.42265, 
+    "longitude": 73.97924,
+    "floor": 2,
+    "capacity": 100,
+    "type": "Canteen"
+
+  },
+
+
+    
+  {
+    "name": "mining building parking area",
+    "latitude":15.42511,
+    "longitude": 73.97919,
+    "floor": 2,
+    "capacity": 100,
+    "type": "Parking"
+
+  },
+
+    
+  {
+    "name": "academic area parking",
+    "latitude":15.42244,
+    "longitude": 73.97853,
+    "floor": 2,
+    "capacity": 100,
+    "type": "Parking"
+  },
+
+      
+  {
+    "name": "IT building parking",
+    "latitude":15.42535,
+    "longitude": 73.97956,
+    "floor": 2,
+    "capacity": 100,
+    "type": "Parking"
+  },
+
+      
+  {
+    "name": "mahalakshmi bunglow parking",
+    "latitude":15.4223,
+    "longitude": 73.97906,
+    "floor": 2,
+    "capacity": 100,
+    "type": "Parking"
+  }
+
+]
