@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import "leaflet/dist/leaflet.css";
 import "./App.css";
-import { MapContainer, TileLayer } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import BuildingMarkers from "./BuildingMarker";
 import buildingsData from './iitgoaplaces.json';
-import Checkbox from "./CheckBox";
+import CheckBox from "./CheckBox";
+import "leaflet-routing-machine";
+import DynamicRouting from './DynamicRouting';
+import 'leaflet-routing-machine/dist/leaflet-routing-machine.css';
+
 
 const buildingTypes = [
   { type: "Office", url: "https://www.freeiconspng.com/thumbs/office-icon/office-icon--insharepics-11.png" },
@@ -37,9 +41,15 @@ function App() {
   return (
     <div className="app-container">
       <div className="sidebar-container">
-        <label htmlFor="building-type"><u><i><b>Building Type:</b></i></u></label>
+        <label>
+          <u>
+            <i>
+              <b>Building Type:</b>
+            </i>
+          </u>
+        </label>
         {buildingTypes.map((value) => (
-          <Checkbox
+          <CheckBox
             key={value.type}
             value={value.type}
             checked={selectedBuilding === value.type}
@@ -49,13 +59,16 @@ function App() {
         ))}
       </div>
       <div className="map-container">
-        <MapContainer center={[15.422, 73.98]} zoom={18} style={{ height: "100%", width: "100%" }}>
+        <MapContainer
+          center={[15.42268, 73.98277]}
+          zoom={18}
+          style={{ height: "100%", width: "100%" }}
+        >
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-
           <BuildingMarkers buildings={filteredBuildings} />
+          <DynamicRouting />
         </MapContainer>
       </div>
-
     </div>
   );
 }
