@@ -5,9 +5,11 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import BuildingMarkers from "./BuildingMarker";
 import buildingsData from './iitgoaplaces.json';
 import CheckBox from "./CheckBox";
+import SearchBar from "./SearchBar";
 import "leaflet-routing-machine";
 import DynamicRouting from './DynamicRouting';
 import 'leaflet-routing-machine/dist/leaflet-routing-machine.css';
+// import L from 'leaflet';
 
 
 const buildingTypes = [
@@ -29,9 +31,16 @@ const buildingTypes = [
 function App() {
   const [selectedBuilding, setSelectedBuilding] = useState("");
   const buildings = buildingsData;
+  const [building, setBuilding] = useState(""); 
 
   const handleCheckboxChange = (event) => {
     setSelectedBuilding(event.target.value);
+  };
+
+  const handleSearch = (location) => {
+    const Building = buildings.find((building) => building.name === location);
+    setBuilding(Building);
+
   };
 
   const filteredBuildings = buildings.filter((building) => {
@@ -41,6 +50,8 @@ function App() {
   return (
     <div className="app-container">
       <div className="sidebar-container">
+        <SearchBar onSearch={handleSearch} />
+        <br />
         <label>
           <u>
             <i>
@@ -63,9 +74,23 @@ function App() {
           center={[15.42268, 73.98277]}
           zoom={18}
           style={{ height: "100%", width: "100%" }}
+          
         >
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           <BuildingMarkers buildings={filteredBuildings} />
+          {building && (
+            <Marker
+            position={[building.latitude, building.longitude]}
+              
+            >
+              <Popup>
+                <div>
+                  <h3>{building.name}</h3>
+                  <p>Click on the buiding area to get directions</p>
+                </div>
+              </Popup>
+            </Marker>
+          )}
           <DynamicRouting />
         </MapContainer>
       </div>
