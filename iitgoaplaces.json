@@ -152,8 +152,8 @@
 
     {
         "name": "IIT Goa Gym",
-        "latitude":15.42246,
-        "longitude": 73.98236,
+        "latitude":15.42227,
+        "longitude": 73.98271,
         "floor": 2,
         "capacity": 100,
         "type": "Gym"
@@ -174,8 +174,8 @@
 
   {
     "name": "GEC Library Hall",
-    "latitude": 15.42307,
-    "longitude": 73.98008,
+    "latitude": 15.42286,
+    "longitude": 73.98099,
     "floor": 2,
     "capacity": 100,
     "type": "Library"
