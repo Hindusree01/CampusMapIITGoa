@@ -1,7 +1,7 @@
-import React, { useState} from "react";
+import React, { useState, useEffect} from "react";
 import "leaflet/dist/leaflet.css";
 import "./App.css";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import BuildingMarkers from "./BuildingMarker";
 import buildingsData from './iitgoaplaces.json';
 import CheckBox from "./CheckBox";
@@ -9,7 +9,7 @@ import SearchBar from "./SearchBar";
 import "leaflet-routing-machine";
 import DynamicRouting from './DynamicRouting';
 import 'leaflet-routing-machine/dist/leaflet-routing-machine.css';
-// import L from 'leaflet';
+import L from 'leaflet';
 
 
 const buildingTypes = [
@@ -31,21 +31,41 @@ const buildingTypes = [
 function App() {
   const [selectedBuilding, setSelectedBuilding] = useState("");
   const buildings = buildingsData;
-  const [building, setBuilding] = useState(""); 
+  const [building, setBuilding] = useState("");
 
   const handleCheckboxChange = (event) => {
     setSelectedBuilding(event.target.value);
+    setBuilding(''); // Reset the selected building
   };
+
+
+
 
   const handleSearch = (location) => {
     const Building = buildings.find((building) => building.name === location);
     setBuilding(Building);
+    setSelectedBuilding(''); // Reset the selected building type
+    
 
   };
 
   const filteredBuildings = buildings.filter((building) => {
     return building.type === selectedBuilding;
   });
+  const CenterMapToPopup = ({ building }) => {
+    const map = useMap();
+    useEffect(() => {
+      if (building) {
+        map.flyTo([building.latitude, building.longitude], 18, {
+          duration: 1,
+        });
+      }
+    }, [map, building]);
+
+    return null;
+  };
+
+  
 
   return (
     <div className="app-container">
@@ -74,23 +94,27 @@ function App() {
           center={[15.42268, 73.98277]}
           zoom={18}
           style={{ height: "100%", width: "100%" }}
-          
+
         >
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           <BuildingMarkers buildings={filteredBuildings} />
           {building && (
             <Marker
-            position={[building.latitude, building.longitude]}
-              
-            >
+              position={[building.latitude, building.longitude]}
+              icon={L.icon({
+                iconUrl:
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCl-oZcmFAnJbhYudu62S3WdbjliPk8mwhOw&usqp=CAU",
+                  iconSize: [25, 25]
+              })}            >
               <Popup>
                 <div>
                   <h3>{building.name}</h3>
-                  <p>Click on the buiding area to get directions</p>
+                  <p>Click on the surrounding area to get directions</p>
                 </div>
               </Popup>
             </Marker>
           )}
+           <CenterMapToPopup building={building} />
           <DynamicRouting />
         </MapContainer>
       </div>
