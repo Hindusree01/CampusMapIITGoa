@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "leaflet/dist/leaflet.css";
 import "./App.css";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
@@ -7,9 +7,11 @@ import buildingsData from './iitgoaplaces.json';
 import CheckBox from "./CheckBox";
 import SearchBar from "./SearchBar";
 import "leaflet-routing-machine";
-import DynamicRouting from './DynamicRouting';
 import 'leaflet-routing-machine/dist/leaflet-routing-machine.css';
 import L from 'leaflet';
+import Direction from "./Directions";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 
 const buildingTypes = [
@@ -32,20 +34,28 @@ function App() {
   const [selectedBuilding, setSelectedBuilding] = useState("");
   const buildings = buildingsData;
   const [building, setBuilding] = useState("");
+  const [sidebarVisible, setSidebarVisible] = useState(false);
+  const [sidebarAnimation, setSidebarAnimation] = useState("");
+  const mapContainerRef = useRef(null);
 
   const handleCheckboxChange = (event) => {
-    setSelectedBuilding(event.target.value);
-    setBuilding(''); // Reset the selected building
+    const selectedValue = event.target.value;
+    setSelectedBuilding((prevSelectedBuilding) => {
+      // Toggle the selected building if it's already selected
+      if (prevSelectedBuilding === selectedValue) {
+        return '';
+      }
+      // Otherwise, set the newly selected building
+      return selectedValue;
+    });
   };
-
-
 
 
   const handleSearch = (location) => {
     const Building = buildings.find((building) => building.name === location);
     setBuilding(Building);
     setSelectedBuilding(''); // Reset the selected building type
-    
+
 
   };
 
@@ -64,62 +74,96 @@ function App() {
 
     return null;
   };
+  const toggleSidebar = () => {
+    if (sidebarVisible) {
+      setSidebarAnimation("slide-out");
+      setTimeout(() => {
+        setSidebarVisible(false);
+        setSidebarAnimation("");
+      }, 300);
+    } else {
+      setSidebarAnimation("slide-in");
+      setTimeout(() => {
+        setSidebarVisible(true);
+      }, 0);
+    }
+  };
 
-  
+
+
 
   return (
-    <div className="app-container">
-      <div className="sidebar-container">
-        <SearchBar onSearch={handleSearch} />
-        <br />
-        <label>
-          <u>
-            <i>
-              <b>Building Type:</b>
-            </i>
-          </u>
-        </label>
-        {buildingTypes.map((value) => (
-          <CheckBox
-            key={value.type}
-            value={value.type}
-            checked={selectedBuilding === value.type}
-            onChange={handleCheckboxChange}
-            iconUrl={value.url}
-          />
-        ))}
-      </div>
-      <div className="map-container">
-        <MapContainer
-          center={[15.42268, 73.98277]}
-          zoom={18}
-          style={{ height: "100%", width: "100%" }}
+    <div>
+      <div style={{ backgroundColor: "rgb(230, 173, 173)", paddingLeft: "10px" }}>Indian Institute Of Technology Goa</div>
+      <div className={`app-container ${sidebarVisible ? '-visible' : ''}`}>
 
-        >
-          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-          <BuildingMarkers buildings={filteredBuildings} />
-          {building && (
-            <Marker
-              position={[building.latitude, building.longitude]}
-              icon={L.icon({
-                iconUrl:
-                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCl-oZcmFAnJbhYudu62S3WdbjliPk8mwhOw&usqp=CAU",
+        {sidebarVisible && (
+          <div className={`sidebar-container ${sidebarAnimation}`}>
+            <button className="close-button" onClick={toggleSidebar}>
+              <i className="fas fa-times"></i>
+            </button>
+            <div>
+              <div ref={mapContainerRef} id="map"></div>
+              <Direction mapContainer={mapContainerRef} />
+            </div>            <br />
+            <label>
+              Building Type:
+            </label>
+            {buildingTypes.map((value) => (
+              <CheckBox
+                key={value.type}
+                value={value.type}
+                checked={selectedBuilding === value.type}
+                onChange={handleCheckboxChange}
+                iconUrl={value.url}
+                whenCreated={(mapInstance) => {
+                  mapContainerRef.current = mapInstance;
+                }}
+
+              />
+            ))}
+          </div>)}
+
+        <div className="map-container">
+          <div className="map-top-bar">
+            <button className="custom-bars" type="button" onClick={toggleSidebar}>
+              <i className="fas fa-bars"></i>
+            </button>
+            <SearchBar onSearch={handleSearch} />
+          </div>
+          <MapContainer
+            center={[15.42268, 73.98277]}
+            zoom={18}
+            style={{ height: "100%", width: "100%" }}
+            zoomControl={false}
+            ref={mapContainerRef}
+          >
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <BuildingMarkers buildings={filteredBuildings} />
+            {building && (
+              <Marker
+                position={[building.latitude, building.longitude]}
+                icon={L.icon({
+                  iconUrl:
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCl-oZcmFAnJbhYudu62S3WdbjliPk8mwhOw&usqp=CAU",
                   iconSize: [25, 25]
-              })}            >
-              <Popup>
-                <div>
-                  <h3>{building.name}</h3>
-                  <p>Click on the surrounding area to get directions</p>
-                </div>
-              </Popup>
-            </Marker>
-          )}
-           <CenterMapToPopup building={building} />
-          <DynamicRouting />
-        </MapContainer>
+                })}>
+                <Popup>
+                  <div>
+                    <h3>{building.name}</h3>
+                    <p>Click on the surrounding area to get directions</p>
+                  </div>
+                </Popup>
+              </Marker>
+            )}
+            <CenterMapToPopup building={building} />
+
+          </MapContainer>
+        </div>
       </div>
     </div>
   );
+
 }
 
 export default App;
