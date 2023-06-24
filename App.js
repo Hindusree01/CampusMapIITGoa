@@ -11,6 +11,7 @@ import L from 'leaflet';
 import Direction from "./Directions";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import React, { useState, useEffect, useRef } from "react";
+import DynamicRouting from "./DynamicRouting";
 
 
 
@@ -152,7 +153,7 @@ function App() {
               </Marker>
             )}
             <CenterMapToPopup building={building} />
-            
+            <DynamicRouting/>
           </MapContainer>
           <div>
               
