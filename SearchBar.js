@@ -46,7 +46,6 @@ const SearchBar = (props) => {
       <button
         className="custom-button"
         type="submit"
-        style={{ fontSize: '16px', padding: '5px'}}
       >
         <i className="fa fa-search" aria-hidden="true"></i> {/* Replace with your desired icon */}
       </button>
