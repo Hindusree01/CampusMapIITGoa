@@ -21,21 +21,23 @@ const Directions = ({ mapContainer }) => {
     mapRef.current = mapContainer?.leafletElement;
   }, [mapContainer]);
 
-  useEffect(() => {
-    if (!mapRef.current) {
-      return; // Map container not available yet
-    }
+  // useEffect(() => {
+  //   if (!mapRef.current) {
+  //     return; // Map container not available yet
+  //   }
 
-    if (routeControl) {
-      mapRef.current.addControl(routeControl);
-    }
+  //   if (routeControl) {
+  //     mapRef.current.addControl(routeControl);
+    
+  //   }
 
-    return () => {
-      if (routeControl) {
-        mapRef.current.removeControl(routeControl);
-      }
-    };
-  }, [routeControl]);
+  //   return () => {
+  //     if (routeControl) {
+  //       mapRef.current.removeControl(routeControl);
+  
+  //     }
+  //   };
+  // }, [routeControl]);
 
   const handleFromChange = (event) => {
     setFromLocation(event.target.value);
@@ -158,6 +160,8 @@ const Directions = ({ mapContainer }) => {
 
           setRouteControl(routingControl);
           routingControl.addTo(map);
+          mapContainer.current.removeControl(routeControl);
+  
         })
         .catch((error) => {
           console.log("Error getting coordinates:", error);
