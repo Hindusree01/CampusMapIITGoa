@@ -188,21 +188,16 @@
   opacity: 0.4;
 }
 
-.direction-button-container {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
+
 
 .direction-button {
-  background-color: #fff;
   border: 1px solid #ddd;
-  height: 30px;
+  background-color: #fff;
   width: 30px;
+  height: 30px;
   position: absolute;
-  top: 20px;
-  left: -461px;
-  z-index: 1000;
+  top: 30px;
+  left: -30px;
 }
 
 .direction-button:hover {
@@ -268,14 +263,10 @@
     top: 0px;
     left: 210px;
     position: absolute;
-    width: 30px;
+    width: 25px;
   }
 
-  .direction-button {
-    position: absolute;
-    top: 20px;
-    left: -226px;
-  }
+ 
   .direction-bar{
     font-size: medium;
   }
