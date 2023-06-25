@@ -108,6 +108,7 @@
   background-color: #fff;
   font-size: 16px;
   padding: 5px;
+  width: 30px;
 
 }
 
@@ -183,10 +184,52 @@
 
 .logo-container img {
   width: 150px;
-  /* Adjust the width as needed */
   height: auto;
   opacity: 0.4;
 }
+
+.direction-button-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.direction-button {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 20px;
+  left: -461px;
+  z-index: 1000;
+}
+
+.direction-button:hover {
+  color: #000;
+  background-color: #f2f2f2;
+}
+
+.direction-bar {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  width: 200px;
+}
+.reset-button{
+  border: 1px solid #ddd;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 60px;
+  left: -30px;
+
+}
+.reset-button:hover{
+  background-color: #f2f2f2;
+}
+
+
 
 @media (max-width: 768px) {
   .app-container {
@@ -225,5 +268,17 @@
     top: 0px;
     left: 210px;
     position: absolute;
+    width: 30px;
   }
+
+  .direction-button {
+    position: absolute;
+    top: 20px;
+    left: -226px;
+  }
+  .direction-bar{
+    font-size: medium;
+  }
+  
+  
 }
