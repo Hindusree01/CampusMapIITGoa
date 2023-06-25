@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import placesData from "./iitgoaplaces.json";
 import "leaflet/dist/leaflet.css";
 import L, { map } from "leaflet";
 import "./App.css";
-//import { getMap } from "react-leaflet";
-
-
+import "leaflet-control-geocoder";
 const Directions = ({ mapContainer }) => {
   const [fromLocation, setFromLocation] = useState("");
   const [toLocation, setToLocation] = useState("");
@@ -13,41 +11,45 @@ const Directions = ({ mapContainer }) => {
   const [showToSuggestions, setShowToSuggestions] = useState(false);
   const [showFromSuggestions, setShowFromSuggestions] = useState(false);
   const [routeControl, setRouteControl] = useState(null);
-  //const [waypoints, setWaypoints] = useState([]);
+  const [useUserLocation, setUseUserLocation] = useState(false);
   const map = mapContainer.current
+  const mapRef = useRef(null);
 
   useEffect(() => {
-    
-    if (!mapContainer.current || !mapContainer.current.leafletElement) {
-      return; // Map container or leafletElement not available yet
+    mapRef.current = mapContainer?.leafletElement;
+  }, [mapContainer]);
+
+  useEffect(() => {
+    if (!mapRef.current) {
+      return; // Map container not available yet
     }
-  
+
     if (routeControl) {
-      mapContainer.current.leafletElement.addControl(routeControl);
+      mapRef.current.addControl(routeControl);
     }
-  
+
     return () => {
       if (routeControl) {
-        mapContainer.current.leafletElement.removeControl(routeControl);
+        mapRef.current.removeControl(routeControl);
       }
     };
-  }, [mapContainer, routeControl]);
+  }, [routeControl]);
 
   const handleFromChange = (event) => {
     setFromLocation(event.target.value);
     setShowToSuggestions(false);
     setShowFromSuggestions(true);
-    setMissingInputs(false)
+    setMissingInputs(false);
+    setUseUserLocation(false);
   };
 
   const handleToChange = (event) => {
     setToLocation(event.target.value);
     setShowToSuggestions(true);
     setShowFromSuggestions(false);
-    setMissingInputs(false)
+    setMissingInputs(false);
   };
 
-  
   const getCoordinates = (location) => {
     return new Promise((resolve, reject) => {
       const foundPlace = placesData.find(
@@ -78,17 +80,48 @@ const Directions = ({ mapContainer }) => {
     setFromLocation(placeName);
     setShowToSuggestions(false);
     setShowFromSuggestions(false);
+    setUseUserLocation(false);
   };
 
-
-  const handleGetDirection = () => {
-    
-    if (toLocation && fromLocation) {
+  const getUserLocation = () => {
+    return new Promise((resolve, reject) => {
+      if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            resolve(L.latLng(position.coords.latitude, position.coords.longitude));
+          },
+          (error) => {
+            reject("Failed to get user's location");
+          }
+        );
+      } else {
+        reject("Geolocation not supported");
+      }
+    });
+  };
+  const handleGetDirection = async () => {
+    if (toLocation) {
       setMissingInputs(false);
-      const startLatLng = getCoordinates(fromLocation);
-      const endLatLng = getCoordinates(toLocation);
-      console.log("The start coordinates are", startLatLng);
-      console.log("The end coordinates are", endLatLng);
+      let startLatLng;
+  
+      if (useUserLocation) {
+        try {
+          startLatLng = await getUserLocation();
+        } catch (error) {
+          console.log("Error getting user location:", error);
+          setMissingInputs(true);
+          return;
+        }
+      } else {
+        if (!fromLocation) {
+          setMissingInputs(true);
+          return;
+        }
+        startLatLng = await getCoordinates(fromLocation);
+      }
+  
+      const endLatLng = await getCoordinates(toLocation);
+  
       Promise.all([startLatLng, endLatLng])
         .then(([start, end]) => {
           const routingControl = L.Routing.control({
@@ -104,7 +137,7 @@ const Directions = ({ mapContainer }) => {
             },
             addWaypoints: true,
             draggableWaypoints: true,
-            fitSelectedRoutes: true,
+            fitSelectedRoutes: false,
             showAlternatives: false,
           });
           
@@ -119,9 +152,10 @@ const Directions = ({ mapContainer }) => {
     }
   };
   
-  // useEffect to log routeControl whenever it changes
+  
+
   useEffect(() => {
-    console.log("the routecontrol is",routeControl);
+    console.log("the routecontrol is", routeControl);
   }, [routeControl]);
 
   return (
@@ -129,13 +163,15 @@ const Directions = ({ mapContainer }) => {
       <div className="input-group">
         <label htmlFor="from">From</label>
         <input
-          className={`${missingInputs && !fromLocation ? "missing-input" : ""}`} type="text"
+          className={`${missingInputs && !fromLocation ? "missing-input" : ""}`}
+          type="text"
           id="from"
           autoComplete="off"
           value={fromLocation}
           placeholder="From"
           onChange={handleFromChange}
         />
+        <button onClick={() => setUseUserLocation(true)}>Current Location</button>
         {showFromSuggestions && getSuggestions(fromLocation).length > 0 && (
           <ul className="suggestions-list">
             {getSuggestions(fromLocation).map((place) => (
@@ -153,7 +189,8 @@ const Directions = ({ mapContainer }) => {
       <div className="input-group">
         <label htmlFor="to">To</label>
         <input
-          className={`${missingInputs && !toLocation ? "missing-input" : ""}`} type="text"
+          className={`${missingInputs && !toLocation ? "missing-input" : ""}`}
+          type="text"
           id="to"
           autoComplete="off"
           value={toLocation}
@@ -174,9 +211,7 @@ const Directions = ({ mapContainer }) => {
         )}
       </div>
 
-      {missingInputs && (
-        <p className="error">Please fill in both input fields.</p>
-      )}
+      {missingInputs && <p className="error">Please fill in both input fields.</p>}
 
       <button onClick={handleGetDirection}>Get Directions</button>
     </div>
