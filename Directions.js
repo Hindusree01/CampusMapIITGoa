@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import placesData from "./iitgoaplaces.json";
 import "leaflet/dist/leaflet.css";
-import L, { map } from "leaflet";
+import L from "leaflet";
 import "./App.css";
 import "leaflet-control-geocoder";
+
+
 const Directions = ({ mapContainer }) => {
   const [fromLocation, setFromLocation] = useState("");
   const [toLocation, setToLocation] = useState("");
@@ -103,7 +105,7 @@ const Directions = ({ mapContainer }) => {
     if (toLocation) {
       setMissingInputs(false);
       let startLatLng;
-  
+
       if (useUserLocation) {
         try {
           startLatLng = await getUserLocation();
@@ -119,9 +121,9 @@ const Directions = ({ mapContainer }) => {
         }
         startLatLng = await getCoordinates(fromLocation);
       }
-  
+
       const endLatLng = await getCoordinates(toLocation);
-  
+
       Promise.all([startLatLng, endLatLng])
         .then(([start, end]) => {
           const routingControl = L.Routing.control({
@@ -139,8 +141,21 @@ const Directions = ({ mapContainer }) => {
             draggableWaypoints: true,
             fitSelectedRoutes: false,
             showAlternatives: false,
+            createMarker: function (i, wp) {
+              return L.marker(wp.latLng, {
+                draggable: true,
+                icon: L.icon({
+                  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+                  iconSize: [25, 41],
+                  iconAnchor: [12, 41],
+                  popupAnchor: [1, -34],
+                  tooltipAnchor: [16, -28],
+                  shadowSize: [41, 41],
+                }),
+              }).bindPopup('<div class="custom-popup"></div>'); 
+            },
           });
-          
+
           setRouteControl(routingControl);
           routingControl.addTo(map);
         })
@@ -151,17 +166,25 @@ const Directions = ({ mapContainer }) => {
       setMissingInputs(true);
     }
   };
-  
-  
+
+
 
   useEffect(() => {
     console.log("the routecontrol is", routeControl);
   }, [routeControl]);
 
+  const CurrentLocatoionHandler = () => {
+    setUseUserLocation(true);
+    setFromLocation("Current Location");
+
+  }
+
   return (
     <div>
+      
       <div className="input-group">
         <label htmlFor="from">From</label>
+        <br />
         <input
           className={`${missingInputs && !fromLocation ? "missing-input" : ""}`}
           type="text"
@@ -171,7 +194,7 @@ const Directions = ({ mapContainer }) => {
           placeholder="From"
           onChange={handleFromChange}
         />
-        <button onClick={() => setUseUserLocation(true)}>Current Location</button>
+        <button onClick={CurrentLocatoionHandler}>Current Location</button>
         {showFromSuggestions && getSuggestions(fromLocation).length > 0 && (
           <ul className="suggestions-list">
             {getSuggestions(fromLocation).map((place) => (
@@ -188,6 +211,7 @@ const Directions = ({ mapContainer }) => {
 
       <div className="input-group">
         <label htmlFor="to">To</label>
+        <br />
         <input
           className={`${missingInputs && !toLocation ? "missing-input" : ""}`}
           type="text"
