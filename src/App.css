@@ -235,7 +235,7 @@
   .sidebar-container {
     flex: 1;
     height: 100%;
-    width: 170px;
+    width: 130px;
     transform: translateX(0);
   }
 
