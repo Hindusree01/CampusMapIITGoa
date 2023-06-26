@@ -1,6 +1,6 @@
 import React from "react";
 
-function Checkbox({ value, checked, onChange, iconUrl }) {
+function Checkbox({ value, checked, onChange }) {
   return (
     <label>
       <input
@@ -9,7 +9,7 @@ function Checkbox({ value, checked, onChange, iconUrl }) {
         checked={checked}
         onChange={onChange}
       />
-      <img src={iconUrl} alt={value} width="20" height="20" style={{ border: "1px solid black" }} />    {value}
+      {value}
     </label>
   );
 }
