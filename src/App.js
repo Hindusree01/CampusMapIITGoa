@@ -135,12 +135,7 @@ function App() {
               </div>
             ))}
           </div>
-          {building && (
-            <div className="building-details">
-              <h2>{building.name}</h2>
-              <p>{building.type}</p>
-            </div>
-          )}
+          
         </div>
 
       )
