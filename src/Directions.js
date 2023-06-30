@@ -5,22 +5,51 @@ import L from "leaflet";
 import "./App.css";
 import "leaflet-control-geocoder";
 
-
-const Directions = ({ mapContainer }) => {
-  const [fromLocation, setFromLocation] = useState("");
-  const [toLocation, setToLocation] = useState("");
+const Directions = ({ mapContainer, ToLocation = "" }) => {
+  const [fromLocation, setFromLocation] = useState("Current Location");
+  const [toLocation, setToLocation] = useState(ToLocation);
   const [missingInputs, setMissingInputs] = useState(false);
   const [showToSuggestions, setShowToSuggestions] = useState(false);
   const [showFromSuggestions, setShowFromSuggestions] = useState(false);
   const [routeControl, setRouteControl] = useState(null);
-  const [useUserLocation, setUseUserLocation] = useState(false);
-  const map = mapContainer.current
+  const map = mapContainer.current;
   const mapRef = useRef(null);
 
   useEffect(() => {
     mapRef.current = mapContainer?.leafletElement;
   }, [mapContainer]);
 
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setShowToSuggestions(false);
+        setShowFromSuggestions(false);
+      }
+    };
+  
+    const handleClickOutside = (event) => {
+      if (
+        !event.target.closest(".input-group") &&
+        !event.target.closest(".suggestions-list")
+      ) {
+        setShowToSuggestions(false);
+        setShowFromSuggestions(false);
+      }
+    };
+  
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("click", handleClickOutside);
+  
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+  
+
+  useEffect(() => {
+    setToLocation(ToLocation);
+  }, [ToLocation]);
 
 
   const handleFromChange = (event) => {
@@ -28,16 +57,21 @@ const Directions = ({ mapContainer }) => {
     setShowToSuggestions(false);
     setShowFromSuggestions(true);
     setMissingInputs(false);
-    setUseUserLocation(false);
   };
 
   const handleToChange = (event) => {
-    setToLocation(event.target.value);
-    setShowToSuggestions(true);
+    const value = event.target.value;
+    if (value === "") {
+      setToLocation("");
+      setShowToSuggestions(true);
+    } else {
+      setToLocation(value);
+      setShowToSuggestions(true);
+    }
     setShowFromSuggestions(false);
     setMissingInputs(false);
   };
-
+ 
   const getCoordinates = (location) => {
     return new Promise((resolve, reject) => {
       const foundPlace = placesData.find(
@@ -53,9 +87,13 @@ const Directions = ({ mapContainer }) => {
 
   const getSuggestions = (input) => {
     const inputValue = input.trim().toLowerCase();
-    return placesData.filter((place) =>
-      place.name.toLowerCase().startsWith(inputValue)
-    );
+    if (inputValue === "") {
+      return placesData;
+    } else {
+      return placesData.filter((place) =>
+        place.name.toLowerCase().startsWith(inputValue)
+      );
+    }
   };
 
   const handleSuggestionClickTo = (placeName) => {
@@ -68,15 +106,23 @@ const Directions = ({ mapContainer }) => {
     setFromLocation(placeName);
     setShowToSuggestions(false);
     setShowFromSuggestions(false);
-    setUseUserLocation(false);
+    if (placeName === "Current Location") {
+      setToLocation("");
+    }
   };
+  
 
   const getUserLocation = () => {
     return new Promise((resolve, reject) => {
       if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(
           (position) => {
-            resolve(L.latLng(position.coords.latitude, position.coords.longitude));
+            resolve(
+              L.latLng(
+                position.coords.latitude,
+                position.coords.longitude
+              )
+            );
           },
           (error) => {
             reject("Failed to get user's location");
@@ -87,12 +133,13 @@ const Directions = ({ mapContainer }) => {
       }
     });
   };
+
   const handleGetDirection = async () => {
     if (toLocation) {
       setMissingInputs(false);
       let startLatLng;
 
-      if (useUserLocation) {
+      if (fromLocation === "Current Location") {
         try {
           startLatLng = await getUserLocation();
         } catch (error) {
@@ -131,14 +178,15 @@ const Directions = ({ mapContainer }) => {
               return L.marker(wp.latLng, {
                 draggable: true,
                 icon: L.icon({
-                  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+                  iconUrl:
+                    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
                   iconSize: [25, 41],
                   iconAnchor: [12, 41],
                   popupAnchor: [1, -34],
                   tooltipAnchor: [16, -28],
                   shadowSize: [41, 41],
                 }),
-              }).bindPopup('<div class="custom-popup"></div>'); 
+              }).bindPopup('<div class="custom-popup"></div>');
             },
           });
 
@@ -154,36 +202,30 @@ const Directions = ({ mapContainer }) => {
     }
   };
 
-
-
   useEffect(() => {
     console.log("the routecontrol is", routeControl);
   }, [routeControl]);
 
-  const CurrentLocatoionHandler = () => {
-    setUseUserLocation(true);
-    setFromLocation("Current Location");
-
-  }
-
   return (
     <div>
-      
       <div className="input-group">
-        <label htmlFor="from">From</label>
+        <label htmlFor="source">Source</label>
         <br />
         <input
           className={`${missingInputs && !fromLocation ? "missing-input" : ""}`}
           type="text"
-          id="from"
+          id="source"
           autoComplete="off"
           value={fromLocation}
-          placeholder="From"
+          placeholder="Source"
           onChange={handleFromChange}
+          onClick={() => setShowFromSuggestions(true)}
         />
-        <button onClick={CurrentLocatoionHandler}>Current Location</button>
-        {showFromSuggestions && getSuggestions(fromLocation).length > 0 && (
+        {showFromSuggestions && (
           <ul className="suggestions-list">
+            <li onClick={() => handleSuggestionClickFrom("Current Location")}>
+              Current Location
+            </li>
             {getSuggestions(fromLocation).map((place) => (
               <li
                 key={place.name}
@@ -197,18 +239,19 @@ const Directions = ({ mapContainer }) => {
       </div>
 
       <div className="input-group">
-        <label htmlFor="to">To</label>
+        <label htmlFor="destination">Destination</label>
         <br />
         <input
           className={`${missingInputs && !toLocation ? "missing-input" : ""}`}
           type="text"
-          id="to"
+          id="destination"
           autoComplete="off"
           value={toLocation}
-          placeholder="To"
+          placeholder="Destination"
           onChange={handleToChange}
+          onClick={() => setShowToSuggestions(true)}
         />
-        {showToSuggestions && getSuggestions(toLocation).length > 0 && (
+        {showToSuggestions && (
           <ul className="suggestions-list">
             {getSuggestions(toLocation).map((place) => (
               <li
@@ -222,7 +265,9 @@ const Directions = ({ mapContainer }) => {
         )}
       </div>
 
-      {missingInputs && <p className="error">Please fill in both input fields.</p>}
+      {missingInputs && (
+        <p className="error">Please fill in both input fields.</p>
+      )}
 
       <button onClick={handleGetDirection}>Get Directions</button>
     </div>
