@@ -19,6 +19,7 @@ const Boundary = () => {
     [15.42188, 73.98220],
     [15.42192, 73.98214],
     [15.42288, 73.98202]
+    
   ];
 
   // Style object for the boundary
