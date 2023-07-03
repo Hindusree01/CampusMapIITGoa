@@ -26,7 +26,7 @@ const Directions = ({ mapContainer, ToLocation = "" }) => {
         setShowFromSuggestions(false);
       }
     };
-  
+
     const handleClickOutside = (event) => {
       if (
         !event.target.closest(".input-group") &&
@@ -36,21 +36,19 @@ const Directions = ({ mapContainer, ToLocation = "" }) => {
         setShowFromSuggestions(false);
       }
     };
-  
+
     document.addEventListener("keydown", handleKeyDown);
     document.addEventListener("click", handleClickOutside);
-  
+
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
-  
 
   useEffect(() => {
     setToLocation(ToLocation);
   }, [ToLocation]);
-
 
   const handleFromChange = (event) => {
     setFromLocation(event.target.value);
@@ -71,7 +69,7 @@ const Directions = ({ mapContainer, ToLocation = "" }) => {
     setShowFromSuggestions(false);
     setMissingInputs(false);
   };
- 
+
   const getCoordinates = (location) => {
     return new Promise((resolve, reject) => {
       const foundPlace = placesData.find(
@@ -106,11 +104,8 @@ const Directions = ({ mapContainer, ToLocation = "" }) => {
     setFromLocation(placeName);
     setShowToSuggestions(false);
     setShowFromSuggestions(false);
-    if (placeName === "Current Location") {
-      setToLocation("");
-    }
+    
   };
-  
 
   const getUserLocation = () => {
     return new Promise((resolve, reject) => {
@@ -118,10 +113,7 @@ const Directions = ({ mapContainer, ToLocation = "" }) => {
         navigator.geolocation.getCurrentPosition(
           (position) => {
             resolve(
-              L.latLng(
-                position.coords.latitude,
-                position.coords.longitude
-              )
+              L.latLng(position.coords.latitude, position.coords.longitude)
             );
           },
           (error) => {
@@ -186,7 +178,7 @@ const Directions = ({ mapContainer, ToLocation = "" }) => {
                   tooltipAnchor: [16, -28],
                   shadowSize: [41, 41],
                 }),
-              }).bindPopup('<div class="custom-popup"></div>');
+              })
             },
           });
 
@@ -210,7 +202,6 @@ const Directions = ({ mapContainer, ToLocation = "" }) => {
     <div>
       <div className="input-group">
         <label htmlFor="source">Source</label>
-        <br />
         <input
           className={`${missingInputs && !fromLocation ? "missing-input" : ""}`}
           type="text"
@@ -240,7 +231,6 @@ const Directions = ({ mapContainer, ToLocation = "" }) => {
 
       <div className="input-group">
         <label htmlFor="destination">Destination</label>
-        <br />
         <input
           className={`${missingInputs && !toLocation ? "missing-input" : ""}`}
           type="text"
