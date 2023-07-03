@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import placesData from './iitgoaplaces.json';
 import './App.css';
-import Direction from "./Directions";
 
 const SearchBar = (props) => {
   const [place, setPlace] = useState('');
   const [places, setPlaces] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
   const suggestionsRef = useRef(null);
+
 
   useEffect(() => {
     setPlaces(placesData);
@@ -23,13 +23,15 @@ const SearchBar = (props) => {
         setSuggestions([]);
       }
     };
+  
+    
 
     document.addEventListener('keydown', handleEscKeyPress);
-    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('keydown', handleEscKeyPress);
-      document.removeEventListener('click', handleClickOutside);
     };
   }, []);
 
@@ -52,11 +54,6 @@ const SearchBar = (props) => {
     const inputValue = place.trim().toLowerCase();
     if (inputValue === "") {
       setSuggestions(placesData);
-    } else {
-      const filteredPlaces = placesData.filter((place) =>
-        place.name.toLowerCase().includes(inputValue)
-      );
-      setSuggestions(filteredPlaces);
     }
   };
 
@@ -76,6 +73,8 @@ const SearchBar = (props) => {
     setPlace('');
   };
 
+
+  
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -102,14 +101,10 @@ const SearchBar = (props) => {
         >
           <i className="fa fa-search" aria-hidden="true"></i> {/* Replace with your desired icon */}
         </button>
-        <div className="direction-button-container">
-          <button className="direction-button">
-            <i className="fas fa-directions"></i>
-          </button>
-        </div>
+        
 
         {suggestions.length > 0 && (
-          <ul ref={suggestionsRef} className="suggestions-list">
+          <ul className="suggestions-list" ref={suggestionsRef}>
             {suggestions.map((suggestion) => (
               <li
                 key={suggestion.name}
@@ -122,10 +117,7 @@ const SearchBar = (props) => {
         )}
       </form>
 
-      <div className='direction-bar'>
-        <div ref={props.mapContainerRef} id="map"></div>
-        <Direction mapContainer={props.mapContainerRef} ToLocation={props.ToLocation} />
-      </div>
+     
     </div>
   );
 };
