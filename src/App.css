@@ -286,7 +286,7 @@
   .map-top-bar .custom-button {
     align-self: flex-end;
     top: 0px;
-    left: 217px;
+    left: auto;
     position: absolute;
     width: auto;
     height: auto;
