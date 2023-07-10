@@ -1,3 +1,10 @@
+# The dependencies for this project are
+
+## npm install
+## npm install react react-dom leaflet react-leaflet leaflet-routing-machine
+## npm install leaflet-control-geocoder
+## npm install @fortawesome/fontawesome-free
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +75,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
