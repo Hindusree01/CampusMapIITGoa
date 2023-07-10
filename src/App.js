@@ -25,9 +25,10 @@ function App() {
 
 
   const checkboxHeadingMappings = {
-    Campus: ['Office', 'Library', 'Workshop', 'Classroom'],
-    Security: ['SecurityOffice'],
-    Amenities: ['Hostel', 'HostelMess', 'Ground', 'Gym', 'Hospital', 'Canteen', 'Temple'],
+    Campus: ['Offices', 'Library', 'Workshop', 'Classrooms', 'Labs'],
+    Security: ['Security Office'],
+    Amenities: ['Hostel', 'Dining', 'Recreation', 'Wellness', 'Canteen', 'Temple'],
+    Parking:['Parking']
   };
 
   const handleCheckboxChange = (event) => {
