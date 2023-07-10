@@ -4,31 +4,31 @@ import {Icon} from "leaflet";
 
 // Define the icons for different building types
 const icons = {
-    Classroom: new Icon({
+    Classrooms: new Icon({
         iconUrl: "https://cdn-icons-png.flaticon.com/512/185/185578.png",
         iconSize: [25, 25]
     }),
-    Office: new Icon({
+    Offices: new Icon({
         iconUrl: "https://www.freeiconspng.com/thumbs/office-icon/office-icon--insharepics-11.png",
         iconSize: [25, 25]
     }),
-    Ground: new Icon({
-        iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr8ujkX0fQQsKgF8yc8SOEhJdADH0dQUYzeA&usqp=CAU",
+    Labs: new Icon({
+        iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbBUKCYyJXo4YGKtfQgpTfjmSM0fRDzp5olQ&usqp=CAU",
         iconSize: [25, 25]
     }),
-    Gym: new Icon({
-        iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaTVrtdfW9JzqRHQ-p_gg0QlZeyiEiAcFfvA&usqp=CAU",
+    Recreation: new Icon({
+        iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbWfkn0p20ZOzJygbdMexz82T7D1yD1py7AQ&usqp=CAU",
         iconSize: [25, 25]
     }),
     Hostel: new Icon({
         iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL7DJ87FTOMYy5625HjLikY7UMNRksMwqNbQ&usqp=CAU",
         iconSize: [25, 25]
     }),
-    Hospital: new Icon({
+    Wellness: new Icon({
         iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm2aOqhaEWXy9PPvUJsKncsphLDINn_DJDAg&usqp=CAU",
         iconSize: [25, 25]
     }),
-    SecurityOffice: new Icon({
+    'Security Office': new Icon({
         iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpRcGwraKxLbXkn9xjb36e8jN5uXp1euU2cg&usqp=CAU",
         iconSize: [25, 25]
     }),
@@ -40,7 +40,7 @@ const icons = {
         iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNda2zhD8AeoGbCSwtf-Gzy5lYAGs1itXb-A&usqp=CAU",
         iconSize: [25, 25]
     }),
-    HostelMess: new Icon({
+    Dining: new Icon({
         iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS66g_41IcDqXFidRy5mmYGGR8xbv5t3E8cxA&usqp=CAU",
         iconSize: [25, 25]
     }),
@@ -75,8 +75,8 @@ function BuildingMarkers({ buildings }) {
                         <Popup>
                             <div>
                                 <h3>{building.name}</h3>
-                                <p>Capacity: {building.capacity}</p>
-                                <p>Floors: {building.floor}</p>
+                                {building.capacity && <p>Capacity: {building.capacity}</p>}
+                                {building.floor && <p>Floors: {building.floor}</p>}
                             </div>
                         </Popup>
                     </Marker>
