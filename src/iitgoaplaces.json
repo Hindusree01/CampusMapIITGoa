@@ -87,6 +87,8 @@
     "name": "Mechanical Workshop, GEC",
     "latitude": 15.42297,
     "longitude": 73.97861,
+    "floor": 1,
+    "capacity": 100,
     "type": "Workshop",
     "description": " "
   },
@@ -202,10 +204,11 @@
     "type": "Security Office",
     "description": " "
   },
+  
   {
-    "name": "Mechanical Workshop, GEC",
-    "latitude": 15.42299,
-    "longitude": 73.97858,
+    "name": "Mechanical Workshop, IIT Goa",
+    "latitude": 15.42363,
+    "longitude": 73.97971,
     "floor": 1,
     "capacity": 100,
     "type": "Workshop",
@@ -217,6 +220,15 @@
     "longitude": 73.97924,
     "floor": 1,
     "capacity": 100,
+    "type": "Canteen",
+    "description": " "
+  },
+  {
+    "name": "Canteen, IIT Goa",
+    "latitude": 15.42274,
+    "longitude": 73.98290,
+    "floor": 1,
+    "capacity": 50,
     "type": "Canteen",
     "description": " "
   },
