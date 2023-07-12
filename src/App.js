@@ -106,9 +106,14 @@ function App() {
   };
   const destinationHandler = () => {
     setToLocation(building.name);
-    setSidebarVisible(!sidebarVisible);
+    setSidebarVisible(true);
     setShowDirection(true);
     setBuilding("");
+  }
+  const destinationHandlerTwo =(buildingName)=>{
+    setToLocation(buildingName);
+    setSidebarVisible(true);
+    setShowDirection(true);
   }
   const handleClickonDirection = () => {
     setShowDirection(!showDirection);
@@ -172,7 +177,7 @@ function App() {
         >
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           <Boundary />
-          <BuildingMarkers buildings={filteredBuildings} />
+          <BuildingMarkers buildings={filteredBuildings} destination={destinationHandlerTwo} />
           {building && (
             <Marker
               position={[building.latitude, building.longitude]}
@@ -185,7 +190,7 @@ function App() {
               <Popup>
                 <div>
                   <h3>{building.name}</h3>
-                  <button onClick={destinationHandler}>Set as Destination</button>
+                  <button onClick={destinationHandler}>Add as Destination</button>
                 </div>
               </Popup>
             </Marker>
