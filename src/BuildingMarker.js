@@ -59,7 +59,7 @@ const icons = {
     
 };
 
-function BuildingMarkers({ buildings }) {
+function BuildingMarkers({ buildings, destination }) {
     return (
         <>
             {buildings.map((building, index) => {
@@ -77,6 +77,8 @@ function BuildingMarkers({ buildings }) {
                                 <h3>{building.name}</h3>
                                 {building.capacity && <p>Capacity: {building.capacity}</p>}
                                 {building.floor && <p>Floors: {building.floor}</p>}
+                                <button onClick={() => destination(building.name)}>Add as Destination</button>
+
                             </div>
                         </Popup>
                     </Marker>
