@@ -78,5 +78,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### ' links for visiting iitgoa map
 
-https://iit-goa-campus-map.vercel.app/
+https://iit-goa-campus-map.vercel.app/  .
+
 https://sparkling-halva-ffcf8a.netlify.app/
