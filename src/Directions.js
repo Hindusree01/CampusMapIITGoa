@@ -76,7 +76,7 @@ const Directions = ({ mapContainer, ToLocation = "" }) => {
         (place) => place.name.toLowerCase() === location.toLowerCase()
       );
       if (foundPlace) {
-        resolve(L.latLng(foundPlace.latitude, foundPlace.longitude));
+        resolve(L.latLng(foundPlace.pathFindingLocation.lat, foundPlace.pathFindingLocation.long));
       } else {
         reject("Location not found");
       }
