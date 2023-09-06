@@ -3,265 +3,240 @@
     "name": "Admin Block",
     "latitude": 15.42259,
     "longitude": 73.9802,
-    "floor": 2,
-    "capacity": 100,
-    "type": "Offices",
-    "description": " "
+    "type": "Buildings"
   },
   {
     "name": "Mahalaxmi Bungalow",
     "latitude": 15.42217,
     "longitude": 73.97907,
-    "floor": 2,
-    "capacity": 100,
-    "type": "Offices",
-    "description": " "
+    "type": "Buildings"
   },
   {
-    "name": "Academic Block A (Systems Lab, Faculty Cabins)",
+    "name": "Academic Block A ",
     "latitude": 15.42258,
     "longitude": 73.97871,
-    "capacity": 100,
-    "type": "Labs",
-    "description": " "
+    "type": "Buildings"
+  },
+  {
+    "name": "Academic Block B ",
+    "latitude": 15.42258,
+    "longitude": 73.97843,
+    "type": "Buildings"
+  },
+  {
+    "name": "P G Block, IIT Goa",
+    "latitude": 15.42302,
+    "longitude": 73.97864,
+    "type": "Buildings"
+  },
+  {
+    "name": "Electrical & Engineering Department ",
+    "latitude": 15.42448,
+    "longitude": 73.97858,
+    "type": "Buildings"
+  },
+  {
+    "name": "Mining Building",
+    "latitude": 15.42509,
+    "longitude": 73.97862,
+    "type": "Buildings"
   },
   {
     "name": "Computing Center",
     "latitude": 15.42269,
     "longitude": 73.97993,
-    "capacity": 100,
-    "type": "Labs",
-    "description": " "
+    "type": "Labs"
   },
   {
     "name": "Siemens Lab",
     "latitude": 15.42248,
     "longitude": 73.97994,
-    "capacity": 100,
-    "type": "Labs",
-    "description": " "
+    "type": "Labs"
   },
   {
     "name": "Formal Language Lab",
     "latitude": 15.42493,
     "longitude": 73.97988,
-    "capacity": 100,
-    "type": "Labs",
-    "description": " "
+    "type": "Labs"
   },
   {
-    "name": "Academic Block B (CL2, CL3, Physics Lab, Faculty Cabins)",
+    "name": "Computer Science & Engineering UG(Lab 2)",
+    "latitude": 15.42261,
+    "longitude": 73.97870,
+    "type": "Labs"
+  },
+  {
+    "name": "Communication & Signal Processing UG(Lab 1)",
     "latitude": 15.42258,
-    "longitude": 73.97843,
-    "capacity": 100,
-    "type": "Classrooms",
-    "description": " "
+    "longitude": 73.97869,
+    "type": "Labs"
   },
   {
-    "name": "Mining Building, GEC (LH1, T1-T3)",
-    "latitude": 15.42501,
-    "longitude": 73.97849,
-    "capacity": 100,
-    "type": "Classrooms",
-    "description": " "
+    "name": "Mechanical UG(Lab 3)",
+    "latitude": 15.42262,
+    "longitude": 73.97867,
+    "type": "Labs"
   },
   {
     "name": "(LT1,LT2,LT3,LT4)",
     "latitude": 15.42258,
     "longitude": 73.97976,
-    "capacity": 100,
-    "type": "Classrooms",
-    "description": " "
+    "type": "Classrooms"
   },
-  
+  {
+    "name": "(LH1, Tutorial 1,2,3)",
+    "latitude": 15.42515,
+    "longitude": 73.97842,
+    "type": "Classrooms"
+  },
+  {
+    "name": "Dr.Bidhan Pramanick(Faculty Cabin l1)",
+    "latitude": 15.42258,
+    "longitude": 73.97876,
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Neelakanden(Faculty Cabin l2)",
+    "latitude": 15.42258,
+    "longitude": 73.97879,
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Neha Karanjikar(Faculty Cabin 9)",
+    "latitude": 15.42264,
+    "longitude": 73.97878,
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Clint P George(F-10)",
+    "latitude": 15.42263,
+    "longitude": 73.97875,
+    "type": "Faculty Cabins"
+  },
   {
     "name": "Central Library, IIT Goa",
     "latitude": 15.42182,
     "longitude": 73.97846,
-    "floor": 1,
-    "capacity": 100,
-    "type": "Library",
-    "description": " "
-  },
-  {
-    "name": "Mechanical Workshop, GEC",
-    "latitude": 15.42297,
-    "longitude": 73.97861,
-    "floor": 1,
-    "capacity": 100,
-    "type": "Workshop",
-    "description": " "
-  },
-  {
-    "name": "Hostel Block B1",
-    "latitude": 15.42246,
-    "longitude": 73.98236,
-    "floor": 2,
-    "capacity": 100,
-    "type": "Hostel",
-    "description": " "
-  },
-  {
-    "name": "Hostel Block B2",
-    "latitude": 15.42223,
-    "longitude": 73.98273,
-    "floor": 2,
-    "capacity": 100,
-    "type": "Hostel",
-    "description": " "
-  },
-  {
-    "name": "Hostel Block B3",
-    "latitude": 15.42247,
-    "longitude": 73.9829,
-    "floor": 2,
-    "capacity": 100,
-    "type": "Hostel",
-    "description": " "
-  },
-  {
-    "name": "Hostel Block G1",
-    "latitude": 15.42291,
-    "longitude": 73.98317,
-    "floor": 2,
-    "capacity": 100,
-    "type": "Hostel",
-    "description": " "
-  },
-  {
-    "name": "Mess Hall, IIT Goa",
-    "latitude": 15.42298,
-    "longitude": 73.98259,
-    "floor": 1,
-    "capacity": 100,
-    "type": "Dining",
-    "description": " "
-  },
-  {
-    "name": "Infinity Ground",
-    "latitude": 15.42617,
-    "longitude": 73.9802,
-    "capacity": 100,
-    "type": "Recreation",
-    "description": " "
-  },
-  {
-    "name": "Happenings Ground",
-    "latitude": 15.42307,
-    "longitude": 73.98008,
-    "capacity": 100,
-    "type": "Recreation",
-    "description": " "
-  },
-  {
-    "name": "Gymkhana, GEC",
-    "latitude": 15.4255,
-    "longitude": 73.9804,
-    "floor": 1,
-    "capacity": 100,
-    "type": "Recreation",
-    "description": " "
-  },
-  {
-    "name": "Gym, IIT Goa",
-    "latitude": 15.42227,
-    "longitude": 73.98271,
-    "floor": 1,
-    "capacity": 100,
-    "type": "Recreation",
-    "description": " "
-  },
-  {
-    "name": "Medical Centre, IIT Goa",
-    "latitude": 15.41948,
-    "longitude": 73.98064,
-    "floor": 1,
-    "capacity": 100,
-    "type": "Wellness",
-    "description": " "
+    "type": "Library"
   },
   {
     "name": "Library Hall, GEC",
     "latitude": 15.42286,
     "longitude": 73.98099,
-    "floor": 2,
-    "capacity": 100,
-    "type": "Library",
-    "description": " "
+    "type": "Library"
+  },
+  {
+    "name": "Mechanical Workshop, GEC",
+    "latitude": 15.42297,
+    "longitude": 73.97861,
+    "type": "Workshop"
+  },
+  {
+    "name": "Hostel Block B1",
+    "latitude": 15.42246,
+    "longitude": 73.98236,
+    "type": "Hostel"
+  },
+  {
+    "name": "Hostel Block B2",
+    "latitude": 15.42223,
+    "longitude": 73.98273,
+    "type": "Hostel"
+  },
+  {
+    "name": "Hostel Block B3",
+    "latitude": 15.42247,
+    "longitude": 73.9829,
+    "type": "Hostel"
+  },
+  {
+    "name": "Hostel Block G1",
+    "latitude": 15.42291,
+    "longitude": 73.98317,
+    "type": "Hostel"
+  },
+  {
+    "name": "Mess Hall, IIT Goa",
+    "latitude": 15.42298,
+    "longitude": 73.98259,
+    "type": "Dining"
+  },
+  {
+    "name": "Infinity Ground",
+    "latitude": 15.42617,
+    "longitude": 73.9802,
+    "type": "Recreation"
+  },
+  {
+    "name": "Happenings Ground",
+    "latitude": 15.42307,
+    "longitude": 73.98008,
+    "type": "Recreation"
+  },
+  {
+    "name": "Gymkhana, GEC",
+    "latitude": 15.4255,
+    "longitude": 73.9804,
+    "type": "Recreation"
+  },
+  {
+    "name": "Gym, IIT Goa",
+    "latitude": 15.42227,
+    "longitude": 73.98271,
+    "type": "Recreation"
+  },
+  {
+    "name": "Medical Centre, IIT Goa",
+    "latitude": 15.41948,
+    "longitude": 73.98064,
+    "type": "Wellness"
   },
   {
     "name": "Hanuman Temple",
     "latitude": 15.42071,
     "longitude": 73.98152,
-    "capacity": 100,
-    "type": "Temple",
-    "description": " "
+    "type": "Temple"
   },
   {
     "name": "Security Post",
     "latitude": 15.42295,
     "longitude": 73.98213,
-    "type": "Security Office",
-    "description": " "
-  },
-  
-  {
-    "name": "Mechanical Workshop, IIT Goa",
-    "latitude": 15.42363,
-    "longitude": 73.97971,
-    "floor": 1,
-    "capacity": 100,
-    "type": "Workshop",
-    "description": " "
+    "type": "Security Office"
   },
   {
     "name": "Canteen, GEC",
     "latitude": 15.42265,
     "longitude": 73.97924,
-    "floor": 1,
-    "capacity": 100,
-    "type": "Canteen",
-    "description": " "
+    "type": "Canteen"
   },
   {
     "name": "Canteen, IIT Goa",
     "latitude": 15.42274,
     "longitude": 73.98290,
-    "floor": 1,
-    "capacity": 50,
-    "type": "Canteen",
-    "description": " "
+    "type": "Canteen"
   },
   {
     "name": "Mining Building Parking",
     "latitude": 15.42511,
     "longitude": 73.97919,
-    "capacity": 100,
-    "type": "Parking",
-    "description": " "
+    "type": "Parking"
   },
   {
     "name": "Academic Block Parking",
     "latitude": 15.42244,
     "longitude": 73.97853,
-    "capacity": 100,
-    "type": "Parking",
-    "description": " "
+    "type": "Parking"
   },
   {
     "name": "IT Building Parking",
     "latitude": 15.42535,
     "longitude": 73.97956,
-    "capacity": 100,
-    "type": "Parking",
-    "description": " "
+    "type": "Parking"
   },
   {
     "name": "Mahalakshmi Bunglow Parking",
     "latitude": 15.4223,
     "longitude": 73.97906,
-    "capacity": 100,
-    "type": "Parking",
-    "description": " "
+    "type": "Parking"
   }
 ]
