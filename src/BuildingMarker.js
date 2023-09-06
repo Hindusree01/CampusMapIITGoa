@@ -8,17 +8,21 @@ const icons = {
         iconUrl: "https://cdn-icons-png.flaticon.com/512/185/185578.png",
         iconSize: [17, 17]
     }),
+    Offices: new Icon({
+        iconUrl: "https://static.vecteezy.com/system/resources/thumbnails/005/720/273/small/office-building-icon-two-point-perspective-buildings-illustration-isolated-on-white-background-free-vector.jpg",
+        iconSize: [8, 8]
+    }),
     Buildings: new Icon({
         iconUrl: "https://static.vecteezy.com/system/resources/thumbnails/005/720/273/small/office-building-icon-two-point-perspective-buildings-illustration-isolated-on-white-background-free-vector.jpg",
         iconSize: [17, 17]
     }),
     'Faculty Cabins': new Icon({
         iconUrl: "https://thumbs.dreamstime.com/b/black-line-icon-faculty-bureau-division-black-line-icon-faculty-conference-academy-bureau-division-167849240.jpg",
-        iconSize: [17, 17]
+        iconSize: [8, 8]
     }),
     Labs: new Icon({
         iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbBUKCYyJXo4YGKtfQgpTfjmSM0fRDzp5olQ&usqp=CAU",
-        iconSize: [17, 17]
+        iconSize: [8, 8]
     }),
     Recreation: new Icon({
         iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbWfkn0p17ZOzJygbdMexz82T7D1yD1py7AQ&usqp=CAU",
