@@ -3,240 +3,918 @@
     "name": "Admin Block",
     "latitude": 15.42259,
     "longitude": 73.9802,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
     "type": "Buildings"
   },
   {
     "name": "Mahalaxmi Bungalow",
     "latitude": 15.42217,
     "longitude": 73.97907,
+    "pathFindingLocation": { "lat": 15.42220, "long": 73.97900 },
     "type": "Buildings"
   },
   {
     "name": "Academic Block A ",
     "latitude": 15.42258,
     "longitude": 73.97871,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
     "type": "Buildings"
   },
   {
     "name": "Academic Block B ",
     "latitude": 15.42258,
     "longitude": 73.97843,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97848 },
     "type": "Buildings"
   },
   {
     "name": "P G Block, IIT Goa",
     "latitude": 15.42302,
     "longitude": 73.97864,
+    "pathFindingLocation": { "lat": 15.42303, "long": 73.97885 },
     "type": "Buildings"
   },
   {
     "name": "Electrical & Engineering Department ",
     "latitude": 15.42448,
     "longitude": 73.97858,
+    "pathFindingLocation": { "lat": 15.42453, "long": 73.97879 },
     "type": "Buildings"
   },
   {
     "name": "Mining Building",
     "latitude": 15.42509,
     "longitude": 73.97862,
+    "pathFindingLocation": { "lat": 15.42510, "long": 73.97906 },
     "type": "Buildings"
   },
+  {
+    "name": "CITS(Staff Room-1)",
+    "latitude": 15.42215,
+    "longitude": 73.97902,
+    "pathFindingLocation": { "lat": 15.42220, "long": 73.97900 },
+    "type": "Offices"
+  },
+  {
+    "name": "HPC Room",
+    "latitude": 15.42216,
+    "longitude": 73.97909,
+    "pathFindingLocation": { "lat": 15.42220, "long": 73.97900 },
+    "type": "Offices"
+  },
+  {
+    "name": "CITS(Staff Room-2)",
+    "latitude": 15.42219,
+    "longitude": 73.97896,
+    "pathFindingLocation": { "lat": 15.42220, "long": 73.97900 },
+    "type": "Offices"
+  },
+  {
+    "name": "Student Affair",
+    "latitude": 15.42260,
+    "longitude": 73.97975,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
+    "type": "Offices"
+  },
+  {
+    "name": "Directorate Office",
+    "latitude": 15.42260,
+    "longitude": 73.97975,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
+    "type": "Offices"
+  },
+  {
+    "name": "C&EMD",
+    "latitude": 15.42263,
+    "longitude": 73.97822,
+    "pathFindingLocation": { "lat": 15.42266, "long": 73.97824 },
+    "type": "Offices"
+  },
+  {
+    "name": "C&EMD",
+    "latitude": 15.42271,
+    "longitude": 73.97820,
+    "pathFindingLocation": { "lat": 15.42272, "long": 73.97823 },
+    "type": "Offices"
+  },
+  {
+    "name": "OSD & Advisor Offices(4,5)",
+    "latitude": 15.42262,
+    "longitude": 73.98029,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
+    "type": "Offices"
+  },
+  {
+    "name": "R&D Office",
+    "latitude": 15.42262,
+    "longitude": 73.98033,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
+    "type": "Offices"
+  },
+  {
+    "name": "Cabin of Dean",
+    "latitude": 15.42262,
+    "longitude": 73.98038,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
+    "type": "Offices"
+  },
+  {
+    "name": "Meeting Room",
+    "latitude": 15.42262,
+    "longitude": 73.98043,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
+    "type": "Offices"
+  },
+  {
+    "name": "Registrar Office",
+    "latitude": 15.42254,
+    "longitude": 73.98008,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
+    "type": "Offices"
+  },
+  {
+    "name": "Admic Office",
+    "latitude": 15.42254,
+    "longitude": 73.98012,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
+    "type": "Offices"
+  },
+  {
+    "name": "S&P Office",
+    "latitude": 15.42254,
+    "longitude": 73.98016,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
+    "type": "Offices"
+  },
+  {
+    "name": "Accounts",
+    "latitude": 15.42254,
+    "longitude": 73.98019,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
+    "type": "Offices"
+  },
+  {
+    "name": "Internal Audit",
+    "latitude": 15.42254,
+    "longitude": 73.98022,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
+    "type": "Offices"
+  },
+  {
+    "name": "AR(Internal Audir Cabin-2)",
+    "latitude": 15.42254,
+    "longitude": 73.98026,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
+    "type": "Offices"
+  },
+  {
+    "name": "DR(SP&FA Cabin-3)",
+    "latitude": 15.42254,
+    "longitude": 73.98030,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
+    "type": "Offices"
+  },
+  {
+    "name": "Academic Office",
+    "latitude": 15.42254,
+    "longitude": 73.98034,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
+    "type": "Offices"
+  },
+  {
+    "name": "Dean Office(with Meeting Room)",
+    "latitude": 15.42254,
+    "longitude": 73.98038,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
+    "type": "Offices"
+  },
+
   {
     "name": "Computing Center",
     "latitude": 15.42269,
     "longitude": 73.97993,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
     "type": "Labs"
   },
   {
     "name": "Siemens Lab",
     "latitude": 15.42248,
     "longitude": 73.97994,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
     "type": "Labs"
   },
   {
     "name": "Formal Language Lab",
     "latitude": 15.42493,
     "longitude": 73.97988,
+    "pathFindingLocation": { "lat": 15.42501, "long": 73.97953 },
     "type": "Labs"
   },
   {
     "name": "Computer Science & Engineering UG(Lab 2)",
     "latitude": 15.42261,
     "longitude": 73.97870,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
     "type": "Labs"
   },
   {
     "name": "Communication & Signal Processing UG(Lab 1)",
     "latitude": 15.42258,
     "longitude": 73.97869,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
     "type": "Labs"
   },
   {
     "name": "Mechanical UG(Lab 3)",
     "latitude": 15.42262,
     "longitude": 73.97867,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
+    "type": "Labs"
+  },
+  {
+    "name": "EMM-Research(Prof Sachin Kore)(Lab 4)",
+    "latitude": 15.42260,
+    "longitude": 73.97867,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
+    "type": "Labs"
+  },
+  {
+    "name": "AC machine lab(CL1)",
+    "latitude": 15.42275,
+    "longitude": 73.97876,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
+    "type": "Labs"
+  },
+  {
+    "name": "DC machine lab(Next to CL1)",
+    "latitude": 15.42274,
+    "longitude": 73.97874,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
+    "type": "Labs"
+  },
+  {
+    "name": "Dr.Siva-Research Lab(Lab 5 Part A) ",
+    "latitude": 15.42276,
+    "longitude": 73.97844,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97848 },
+    "type": "Labs"
+  },
+  {
+    "name": "Dr.Anirudha Ambekar-Research Lab(Lab 5 Part B)",
+    "latitude": 15.42274,
+    "longitude": 73.97844,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97848 },
+    "type": "Labs"
+  },
+  {
+    "name": "Physics Lab -UG(Lab 6)",
+    "latitude": 15.42271,
+    "longitude": 73.97844,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97848 },
+    "type": "Labs"
+  },
+  {
+    "name": "CoE-Researh Lab",
+    "latitude": 15.42270,
+    "longitude": 73.97846,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97848 },
+    "type": "Labs"
+  },
+  {
+    "name": "CoE-Researh Lab(Lab 7)",
+    "latitude": 15.42268,
+    "longitude": 73.97846,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97848 },
+    "type": "Labs"
+  },
+  {
+    "name": "CoE-Researh Lab(Lab 8)",
+    "latitude": 15.42265,
+    "longitude": 73.97846,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97848 },
+    "type": "Labs"
+  },
+  {
+    "name": "Lab(Dr.Anirudha Ambekar)-HP combustion lab",
+    "latitude": 15.42255,
+    "longitude": 73.97822,
+    "pathFindingLocation": { "lat": 15.42254, "long": 73.97825 },
+    "type": "Labs"
+  },
+  {
+    "name": "Chemistry Lab",
+    "latitude": 15.42510,
+    "longitude": 73.97834,
+    "pathFindingLocation": { "lat": 15.42510, "long": 73.97906 },
+    "type": "Labs"
+  },
+  {
+    "name": "Electrical (Teaching Lab)",
+    "latitude": 15.42439,
+    "longitude": 73.97859,
+    "pathFindingLocation": { "lat": 15.42453, "long": 73.97879 },
+    "type": "Labs"
+  },
+  {
+    "name": "CNC(Research Lab)",
+    "latitude": 15.42400,
+    "longitude": 73.97915,
+    "pathFindingLocation": { "lat": 15.42398, "long": 73.97942 },
+    "type": "Labs"
+  },
+  {
+    "name": "Biology Cell & Culture Lab(RHS 2)",
+    "latitude": 15.42307,
+    "longitude": 73.97873,
+    "pathFindingLocation": { "lat": 15.42303, "long": 73.97885 },
+    "type": "Labs"
+  },
+  {
+    "name": "Meturllgy (RHS 2)",
+    "latitude": 15.42307,
+    "longitude": 73.97868,
+    "pathFindingLocation": { "lat": 15.42303, "long": 73.97885 },
+    "type": "Labs"
+  },
+  {
+    "name": "Nanomission Project (RHS 3)",
+    "latitude": 15.42307,
+    "longitude": 73.97864,
+    "pathFindingLocation": { "lat": 15.42303, "long": 73.97885 },
+    "type": "Labs"
+  },
+  {
+    "name": "Mechanical Lab-UG (LHS 1)",
+    "latitude": 15.42296,
+    "longitude": 73.97864,
+    "pathFindingLocation": { "lat": 15.42303, "long": 73.97885 },
+    "type": "Labs"
+  },
+  {
+    "name": "Cyber Physical System Lab-Research Lab(Prof Subudhi)(LHS 2)",
+    "latitude": 15.42296,
+    "longitude": 73.97869,
+    "pathFindingLocation": { "lat": 15.42303, "long": 73.97885 },
+    "type": "Labs"
+  },
+  {
+    "name": "Power Electronics Lab- UG Lab(LHS 3)",
+    "latitude": 15.42296,
+    "longitude": 73.97874,
+    "pathFindingLocation": { "lat": 15.42303, "long": 73.97885 },
+    "type": "Labs"
+  },
+  {
+    "name": "Biology Cell & Culture Lab(LHS 4)",
+    "latitude": 15.42296,
+    "longitude": 73.97857,
+    "pathFindingLocation": { "lat": 15.42303, "long": 73.97885 },
+    "type": "Labs"
+  },
+  {
+    "name": "High Voltage Lab(LHS 5)",
+    "latitude": 15.42296,
+    "longitude": 73.97852,
+    "pathFindingLocation": { "lat": 15.42303, "long": 73.97885 },
     "type": "Labs"
   },
   {
     "name": "(LT1,LT2,LT3,LT4)",
     "latitude": 15.42258,
     "longitude": 73.97976,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
     "type": "Classrooms"
   },
   {
     "name": "(LH1, Tutorial 1,2,3)",
     "latitude": 15.42515,
     "longitude": 73.97842,
+    "pathFindingLocation": { "lat": 15.42510, "long": 73.97906 },
+    "type": "Classrooms"
+  },
+  {
+    "name": "Tutorial 3 (CL2)",
+    "latitude": 15.42256,
+    "longitude": 73.97848,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97848 },
+    "type": "Classrooms"
+  },
+  {
+    "name": "Tutorial 4 (CL3)",
+    "latitude": 15.42259,
+    "longitude": 73.97849,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97848 },
+    "type": "Classrooms"
+  },
+  {
+    "name": "PhD Students Seatings(1,2)",
+    "latitude": 15.42263,
+    "longitude": 73.98002,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
     "type": "Classrooms"
   },
   {
     "name": "Dr.Bidhan Pramanick(Faculty Cabin l1)",
     "latitude": 15.42258,
     "longitude": 73.97876,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
     "type": "Faculty Cabins"
   },
   {
     "name": "Dr.Neelakanden(Faculty Cabin l2)",
     "latitude": 15.42258,
     "longitude": 73.97879,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
     "type": "Faculty Cabins"
   },
   {
     "name": "Dr.Neha Karanjikar(Faculty Cabin 9)",
     "latitude": 15.42264,
     "longitude": 73.97878,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
     "type": "Faculty Cabins"
   },
   {
     "name": "Dr.Clint P George(F-10)",
     "latitude": 15.42263,
     "longitude": 73.97875,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Anirudha Ambekar(Faculty Cabin 1)",
+    "latitude": 15.42270,
+    "longitude": 73.97870,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Thaseen Thajudeen(Faculty Cabin 2)",
+    "latitude": 15.42272,
+    "longitude": 73.97870,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Ponnulakshmi V K(Faculty Cabin 3)",
+    "latitude": 15.42270,
+    "longitude": 73.97873,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Sudhakar Yogiraj(Faculty Cabin 4)",
+    "latitude": 15.42270,
+    "longitude": 73.97875,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Lokpathi Tripathi(Faculty Cabin 5)",
+    "latitude": 15.42274,
+    "longitude": 73.97870,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Sreejith(Faculty Cabin 6)",
+    "latitude": 15.42271,
+    "longitude": 73.97870,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Ashish Bhateja(Faculty Cabin 7)",
+    "latitude": 15.42272,
+    "longitude": 73.97875,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Rudra Narayan Roy(Faculty Cabin 8)",
+    "latitude": 15.42272,
+    "longitude": 73.97873,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97871 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Sujit Kumar Sahoo(Faculty Cabin 13)",
+    "latitude": 15.42269,
+    "longitude": 73.97853,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97848 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Santosh Kumar(Faculty Cabin 14)",
+    "latitude": 15.42271,
+    "longitude": 73.97853,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97848 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Sudipta Kanungo(Faculty Cabin 15)",
+    "latitude": 15.42273,
+    "longitude": 73.97853,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97848 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Santosh Kumar Das(Faculty Cabin 16)",
+    "latitude": 15.42277,
+    "longitude": 73.97838,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97848 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Harpeet Singh(Faculty Cabin 17)",
+    "latitude": 15.42275,
+    "longitude": 73.97840,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97848 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Sashidhar Sampathirao(Faculty Cabin 18)",
+    "latitude": 15.42272,
+    "longitude": 73.97839,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97848 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Saumya Bajpai(Faculty Cabin 19)",
+    "latitude": 15.42269,
+    "longitude": 73.97839,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97848 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Arindam Das(Faculty Cabin 20)",
+    "latitude": 15.42267,
+    "longitude": 73.97839,
+    "pathFindingLocation": { "lat": 15.42250, "long": 73.97848 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Pradeep(Cabin)",
+    "latitude": 15.42191,
+    "longitude": 73.97846,
+    "pathFindingLocation": { "lat": 15.42186, "long": 73.97850 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Sarad Sinha(Faculty Cabin)",
+    "latitude": 15.42214,
+    "longitude": 73.97895,
+    "pathFindingLocation": { "lat": 15.42220, "long": 73.97900 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Shiv Prasad(Faculty Cabin 1)",
+    "latitude": 15.42495,
+    "longitude": 73.97970,
+    "pathFindingLocation": { "lat": 15.42501, "long": 73.97953 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Sunil Paul(Faculty Cabin 2)",
+    "latitude": 15.42495,
+    "longitude": 73.97975,
+    "pathFindingLocation": { "lat": 15.42501, "long": 73.97953 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Rahul CS(Faculty Cabin 3)",
+    "latitude": 15.42495,
+    "longitude": 73.97980,
+    "pathFindingLocation": { "lat": 15.42501, "long": 73.97953 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Abhitosh Upaydhyay(Faculty Cabin 4)",
+    "latitude": 15.42495,
+    "longitude": 73.97985,
+    "pathFindingLocation": { "lat": 15.42501, "long": 73.97953 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Ms. Neeraja Raghavan(Faculty Cabin 5)",
+    "latitude": 15.42490,
+    "longitude": 73.97995,
+    "pathFindingLocation": { "lat": 15.42501, "long": 73.97953 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Arpita Korwar(Faculty Cabin 6)",
+    "latitude": 15.42485,
+    "longitude": 73.97995,
+    "pathFindingLocation": { "lat": 15.42501, "long": 73.97953 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Rajeev Gupta(Faculty Cabin 7)",
+    "latitude": 15.42480,
+    "longitude": 73.97995,
+    "pathFindingLocation": { "lat": 15.42501, "long": 73.97953 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Sudakshina Dutta(Faculty Cabin 8)",
+    "latitude": 15.42475,
+    "longitude": 73.97995,
+    "pathFindingLocation": { "lat": 15.42501, "long": 73.97953 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Mantu Santra(Faculty Cabin 9)",
+    "latitude": 15.42470,
+    "longitude": 73.97995,
+    "pathFindingLocation": { "lat": 15.42501, "long": 73.97953 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Nandakumar(Faculty Cabin 10)",
+    "latitude": 15.42462,
+    "longitude": 73.97989,
+    "pathFindingLocation": { "lat": 15.42501, "long": 73.97953 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Sabiha Hashmi(Faculty Cabin 11)",
+    "latitude": 15.42462,
+    "longitude": 73.97984,
+    "pathFindingLocation": { "lat": 15.42501, "long": 73.97953 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Rishikesh Narayan(Faculty Cabin 12)",
+    "latitude": 15.42462,
+    "longitude": 73.97979,
+    "pathFindingLocation": { "lat": 15.42501, "long": 73.97953 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.E Siva Subramaian Iyer(Faculty Cabin 13)",
+    "latitude": 15.42462,
+    "longitude": 73.97973,
+    "pathFindingLocation": { "lat": 15.42501, "long": 73.97953 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Raja Mitra(Faculty Cabin 14)",
+    "latitude": 15.42462,
+    "longitude": 73.97966,
+    "pathFindingLocation": { "lat": 15.42501, "long": 73.97953 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Jhuma(Faculty Cabin 1)",
+    "latitude": 15.42262,
+    "longitude": 73.98014,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Somenath Biswas(Faculty Cabin 2)",
+    "latitude": 15.42262,
+    "longitude": 73.98019,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Dhirendra Bahadur(Faculty Cabin 3)",
+    "latitude": 15.42262,
+    "longitude": 73.98024,
+    "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Saurabh Triwedi(Faculty Cabin 10)",
+    "latitude": 15.42527,
+    "longitude": 73.97865,
+    "pathFindingLocation": { "lat": 15.42510, "long": 73.97906 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Sandipan De(Faculty Cabin 11)",
+    "latitude": 15.42526,
+    "longitude": 73.97860,
+    "pathFindingLocation": { "lat": 15.42510, "long": 73.97906 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Kalpesh Hariya(Faculty Cabin 12)",
+    "latitude": 15.42525,
+    "longitude": 73.97855,
+    "pathFindingLocation": { "lat": 15.42510, "long": 73.97906 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Divya Padmanabhan(Faculty Cabin 13)",
+    "latitude": 15.42525,
+    "longitude": 73.97870,
+    "pathFindingLocation": { "lat": 15.42510, "long": 73.97906 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Sreenath Balakrishnan(Faculty Cabin 14)",
+    "latitude": 15.42526,
+    "longitude": 73.97874,
+    "pathFindingLocation": { "lat": 15.42510, "long": 73.97906 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Sandip Haldar(Faculty Cabin 15)",
+    "latitude": 15.42524,
+    "longitude": 73.97878,
+    "pathFindingLocation": { "lat": 15.42510, "long": 73.97906 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Satyanath Bhat(Faculty Cabin 15)",
+    "latitude": 15.42524,
+    "longitude": 73.97850,
+    "pathFindingLocation": { "lat": 15.42510, "long": 73.97906 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Sheron Figardo",
+    "latitude": 15.42400,
+    "longitude": 73.97921,
+    "pathFindingLocation": { "lat": 15.42398, "long": 73.97942 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Prof. B.K Mishra",
+    "latitude": 15.42307,
+    "longitude": 73.97878,
+    "pathFindingLocation": { "lat": 15.42303, "long": 73.97885 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Satyaprakash Ahirwar",
+    "latitude": 15.42307,
+    "longitude": 73.97874,
+    "pathFindingLocation": { "lat": 15.42303, "long": 73.97885 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Kedar Joshi",
+    "latitude": 15.42307,
+    "longitude": 73.97870,
+    "pathFindingLocation": { "lat": 15.42303, "long": 73.97885 },
+    "type": "Faculty Cabins"
+  },
+  {
+    "name": "Dr.Shakthi Prasad",
+    "latitude": 15.42307,
+    "longitude": 73.97855,
+    "pathFindingLocation": { "lat": 15.42303, "long": 73.97885 },
     "type": "Faculty Cabins"
   },
   {
     "name": "Central Library, IIT Goa",
     "latitude": 15.42182,
     "longitude": 73.97846,
+    "pathFindingLocation": { "lat": 15.42186, "long": 73.97850 },
     "type": "Library"
   },
   {
     "name": "Library Hall, GEC",
     "latitude": 15.42286,
     "longitude": 73.98099,
+    "pathFindingLocation": { "lat": 15.42248, "long": 73.98086 },
     "type": "Library"
   },
   {
     "name": "Mechanical Workshop, GEC",
     "latitude": 15.42297,
     "longitude": 73.97861,
+    "pathFindingLocation": { "lat": 15.42371, "long": 73.97969 },
     "type": "Workshop"
   },
   {
     "name": "Hostel Block B1",
     "latitude": 15.42246,
     "longitude": 73.98236,
+    "pathFindingLocation": { "lat": 15.42295, "long": 73.98206 },
     "type": "Hostel"
   },
   {
     "name": "Hostel Block B2",
     "latitude": 15.42223,
     "longitude": 73.98273,
+    "pathFindingLocation": { "lat": 15.42295, "long": 73.98206 },
     "type": "Hostel"
   },
   {
     "name": "Hostel Block B3",
     "latitude": 15.42247,
     "longitude": 73.9829,
+    "pathFindingLocation": { "lat": 15.42295, "long": 73.98206 },
     "type": "Hostel"
   },
   {
     "name": "Hostel Block G1",
     "latitude": 15.42291,
     "longitude": 73.98317,
+    "pathFindingLocation": { "lat": 15.42295, "long": 73.98206 },
     "type": "Hostel"
   },
   {
     "name": "Mess Hall, IIT Goa",
     "latitude": 15.42298,
     "longitude": 73.98259,
+    "pathFindingLocation": { "lat": 15.42295, "long": 73.98206 },
     "type": "Dining"
   },
   {
     "name": "Infinity Ground",
     "latitude": 15.42617,
     "longitude": 73.9802,
+    "pathFindingLocation": { "lat": 15.42617, "long": 73.9802 },
     "type": "Recreation"
   },
   {
     "name": "Happenings Ground",
     "latitude": 15.42307,
     "longitude": 73.98008,
+    "pathFindingLocation": { "lat": 15.42307, "long": 73.98008 },
     "type": "Recreation"
   },
   {
     "name": "Gymkhana, GEC",
     "latitude": 15.4255,
     "longitude": 73.9804,
+    "pathFindingLocation": { "lat": 15.42548, "long": 73.98062 },
     "type": "Recreation"
   },
   {
     "name": "Gym, IIT Goa",
     "latitude": 15.42227,
     "longitude": 73.98271,
+    "pathFindingLocation": { "lat": 15.42295, "long": 73.98206 },
     "type": "Recreation"
   },
   {
     "name": "Medical Centre, IIT Goa",
     "latitude": 15.41948,
     "longitude": 73.98064,
+    "pathFindingLocation": { "lat": 15.41948, "long": 73.98064 },
     "type": "Wellness"
   },
   {
     "name": "Hanuman Temple",
     "latitude": 15.42071,
     "longitude": 73.98152,
+    "pathFindingLocation": { "lat": 15.42071, "long": 73.98152 },
     "type": "Temple"
   },
   {
     "name": "Security Post",
     "latitude": 15.42295,
     "longitude": 73.98213,
+    "pathFindingLocation": { "lat": 15.42295, "long": 73.98213 },
     "type": "Security Office"
   },
   {
     "name": "Canteen, GEC",
     "latitude": 15.42265,
     "longitude": 73.97924,
+    "pathFindingLocation": { "lat": 15.42268, "long": 73.97936 },
     "type": "Canteen"
   },
   {
     "name": "Canteen, IIT Goa",
     "latitude": 15.42274,
     "longitude": 73.98290,
+    "pathFindingLocation": { "lat": 15.42295, "long": 73.98206 },
     "type": "Canteen"
   },
   {
     "name": "Mining Building Parking",
     "latitude": 15.42511,
     "longitude": 73.97919,
+    "pathFindingLocation": { "lat": 15.42511, "long": 73.97919 },
     "type": "Parking"
   },
   {
     "name": "Academic Block Parking",
     "latitude": 15.42244,
     "longitude": 73.97853,
+    "pathFindingLocation": { "lat": 15.42244, "long": 73.97853 },
     "type": "Parking"
   },
   {
     "name": "IT Building Parking",
     "latitude": 15.42535,
     "longitude": 73.97956,
+    "pathFindingLocation": { "lat": 15.42535, "long": 73.97956 },
     "type": "Parking"
   },
   {
     "name": "Mahalakshmi Bunglow Parking",
     "latitude": 15.4223,
     "longitude": 73.97906,
+    "pathFindingLocation": { "lat": 15.4223, "long": 73.97906 },
     "type": "Parking"
   }
 ]
