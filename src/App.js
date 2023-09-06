@@ -25,7 +25,7 @@ function App() {
 
 
   const checkboxHeadingMappings = {
-    Campus: ['Offices', 'Library', 'Workshop', 'Classrooms', 'Labs'],
+    Campus: ['Buildings', 'Library', 'Workshop', 'Classrooms', 'Labs','Faculty Cabins'],
     Security: ['Security Office'],
     Amenities: ['Hostel', 'Dining', 'Recreation', 'Wellness', 'Canteen', 'Temple'],
     Parking:['Parking']
