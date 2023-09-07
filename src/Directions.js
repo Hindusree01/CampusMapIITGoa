@@ -15,12 +15,6 @@ const Directions = ({ mapContainer, ToLocation = "" }) => {
   const map = mapContainer.current;
   const mapRef = useRef(null);
 
-  // Add state to track the user's current location
-  const [userLocation, setUserLocation] = useState(null);
-
-  // Create a marker for the user's location
-  const userLocationMarker = useRef(null);
-
   useEffect(() => {
     mapRef.current = mapContainer?.leafletElement;
   }, [mapContainer]);
@@ -55,47 +49,6 @@ const Directions = ({ mapContainer, ToLocation = "" }) => {
   useEffect(() => {
     setToLocation(ToLocation);
   }, [ToLocation]);
-
-  useEffect(() => {
-    // Use watchPosition to continuously track the user's location
-    const watchId = navigator.geolocation.watchPosition(
-      (position) => {
-        const latLng = L.latLng(
-          position.coords.latitude,
-          position.coords.longitude
-        );
-        setUserLocation(latLng);
-
-        // Update the user's location marker
-        if (userLocationMarker.current) {
-          userLocationMarker.current.setLatLng(latLng);
-        } else {
-          // Create the user's location marker if it doesn't exist
-          userLocationMarker.current = L.marker(latLng, {
-            draggable: true,
-            icon: L.icon({
-              iconUrl:
-                "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
-              iconSize: [25, 41],
-              iconAnchor: [12, 41],
-              popupAnchor: [1, -34],
-              tooltipAnchor: [16, -28],
-              shadowSize: [41, 41],
-            }),
-          });
-          userLocationMarker.current.addTo(map);
-        }
-      },
-      (error) => {
-        console.error("Error getting user's location:", error);
-      }
-    );
-
-    return () => {
-      // Stop tracking the user's location when the component unmounts
-      navigator.geolocation.clearWatch(watchId);
-    };
-  }, [map]);
 
   const handleFromChange = (event) => {
     setFromLocation(event.target.value);
@@ -151,6 +104,7 @@ const Directions = ({ mapContainer, ToLocation = "" }) => {
     setFromLocation(placeName);
     setShowToSuggestions(false);
     setShowFromSuggestions(false);
+    
   };
 
   const getUserLocation = () => {
@@ -224,7 +178,7 @@ const Directions = ({ mapContainer, ToLocation = "" }) => {
                   tooltipAnchor: [16, -28],
                   shadowSize: [41, 41],
                 }),
-              });
+              })
             },
           });
 
