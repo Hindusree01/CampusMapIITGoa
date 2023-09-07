@@ -133,7 +133,7 @@
     "type": "Offices"
   },
   {
-    "name": "Admic Office",
+    "name": "Admin Office",
     "latitude": 15.42254,
     "longitude": 73.98012,
     "pathFindingLocation": { "lat": 15.42245, "long": 73.97989 },
