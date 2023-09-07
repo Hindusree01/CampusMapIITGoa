@@ -9,8 +9,8 @@ const icons = {
         iconSize: [17, 17]
     }),
     Offices: new Icon({
-        iconUrl: "https://static.vecteezy.com/system/resources/thumbnails/005/720/273/small/office-building-icon-two-point-perspective-buildings-illustration-isolated-on-white-background-free-vector.jpg",
-        iconSize: [8, 8]
+        iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6LF6HpQq9hX08HiSsUPEp2HyxXakcOYCssQ&usqp=CAU",
+        iconSize: [12, 12]
     }),
     Buildings: new Icon({
         iconUrl: "https://static.vecteezy.com/system/resources/thumbnails/005/720/273/small/office-building-icon-two-point-perspective-buildings-illustration-isolated-on-white-background-free-vector.jpg",
@@ -18,18 +18,18 @@ const icons = {
     }),
     'Faculty Cabins': new Icon({
         iconUrl: "https://thumbs.dreamstime.com/b/black-line-icon-faculty-bureau-division-black-line-icon-faculty-conference-academy-bureau-division-167849240.jpg",
-        iconSize: [8, 8]
+        iconSize: [10, 10]
     }),
     Labs: new Icon({
         iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbBUKCYyJXo4YGKtfQgpTfjmSM0fRDzp5olQ&usqp=CAU",
-        iconSize: [8, 8]
+        iconSize: [10, 10]
     }),
     Recreation: new Icon({
-        iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbWfkn0p17ZOzJygbdMexz82T7D1yD1py7AQ&usqp=CAU",
+        iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl0U1Vq_SMn4hgIgjZqwogboSQbNZUX3DY-w&usqp=CAU",
         iconSize: [17, 17]
     }),
     Hostel: new Icon({
-        iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL7DJ87FTOMYy5617HjLikY7UMNRksMwqNbQ&usqp=CAU",
+        iconUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGVC6e4Eqj0wlbNHUndGZTEZXqrwjspOeM7A&usqp=CAU",
         iconSize: [17, 17]
     }),
     Wellness: new Icon({
